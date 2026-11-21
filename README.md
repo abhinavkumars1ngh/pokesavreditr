@@ -1,14 +1,21 @@
 # pokesavreditr
 
-A personal adaptation of [PKSE](https://github.com/kiasta/PKSE) for Nintendo Switch
-and macOS, maintained by
-[Abhinav Kumar Singh](https://github.com/abhinavkumars1ngh). It gives PKSE's
-Pokémon save editor screens a teal-accented interface and the **pokesavreditr**
-name, alongside a Mac workflow for **Pokémon Legends: Z-A** saves.
+A **Pokémon save editor for Nintendo Switch games**. Edit party and box
+Pokémon, levels, moves, stats, trainer details and items through a controller-friendly
+interface with automatic backups and dark/light themes.
 
-This is a derivative project. PKSE and its contributors provide the original
-editor and save logic; see [attribution and modifications](NOTICE.md) and the
-[original documentation](docs/UPSTREAM-README.md).
+Maintained by [Abhinav Kumar Singh](https://github.com/abhinavkumars1ngh).
+
+## Platforms and setup
+
+| Platform | How to use it |
+| --- | --- |
+| Nintendo Switch | Download the `.nro` release and launch through the Homebrew Menu. |
+| macOS | Build the native `.app`; the desktop save workflow currently targets Legends: Z-A. |
+| Windows / Linux | Download and copy the Switch release to an SD card, or build the Switch `.nro`. Native desktop apps are not available. |
+| Android / iOS | No native app is currently provided. |
+
+Follow the [complete setup guide](docs/SETUP.md) for platform-specific steps.
 
 ## Nintendo Switch app
 
@@ -21,24 +28,24 @@ See [Switch installation and building](docs/SWITCH-INSTALL.md). The app bundles
 its artwork/fonts and keeps the original `sdmc:/PKSE/` data directory for
 backup and bank compatibility. App metadata, the window and screen headers use
 the new name; dark and light themes use teal accents, with blue charcoal dark
-surfaces. Original source class names remain for easier upstream comparison.
+surfaces. 
 
 The [Switch build workflow](.github/workflows/build-switch.yml) compiles the
 production `.nro` and uploads an installable `pokesavreditr-switch` artifact.
-Physical-console testing has not been performed for this renamed build.
+Physical-console testing has not been performed for this release.
 
 ## Mac features
 
-- Edit party and box Pokémon through PKSE's existing editor.
+- Edit party and box Pokémon.
 - Open the local Legends: Z-A save automatically, or specify a save file.
 - Create and verify a timestamped backup before each write.
 - Refuse writes if the game is running or the save changed after opening.
 - Use mouse controls or a keyboard mapped to the editor's Switch buttons.
 - Bundle SDL and the generated UI assets in a movable `.app`.
 
-The Mac integration targets Legends: Z-A. Upstream's broader game support,
-console save management and every advanced editing feature have not all been
-validated in this adaptation. No game, save or keys are supplied.
+The Mac save workflow targets Legends: Z-A. Other games, console save management
+and every advanced feature have not all been validated on Mac. No game, save
+or keys are supplied.
 
 ## Build on macOS
 
@@ -96,7 +103,7 @@ two separate steps.
 Backups are stored in `PKSE Backups/` beside the save folder. To restore one,
 quit the game and editor, copy a backup into the save folder, and name the copy
 `main`. The original `~/Library/Application Support/PKSE/` settings/bank location
-is retained for compatibility with the earlier Mac adaptation.
+is retained for compatibility.
 
 | Mac key | Editor control |
 | --- | --- |
@@ -123,5 +130,5 @@ cat /tmp/pokesavreditr-test/save/verification.json
 ## License
 
 [GNU AGPL v3.0](LICENSE). Original PKSE and third-party credits and license
-notices are preserved. See [NOTICE.md](NOTICE.md) for provenance and the Mac
-adaptation changes.
+notices are preserved. See [credits and notices](NOTICE.md) and the
+[original PKSE documentation](docs/UPSTREAM-README.md).

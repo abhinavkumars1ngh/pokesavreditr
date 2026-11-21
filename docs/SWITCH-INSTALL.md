@@ -1,8 +1,9 @@
 # pokesavreditr for Nintendo Switch
 
-pokesavreditr 1.0.0 is a personal adaptation of PKSE, with a new app name,
-teal accents and blue charcoal surfaces. Original PKSE contributors and
-third-party licenses are credited in NOTICE.md and LICENSE.
+pokesavreditr is a **Pokémon save editor for Nintendo Switch games**, with
+party/box editing, trainer and item tools, backups, and dark/light themes.
+
+For Mac, Windows and Linux instructions, see [the setup guide](SETUP.md).
 
 ## Install
 
@@ -28,8 +29,7 @@ Keep a separate backup before editing. Illegal values are informationally
 flagged; the editor does not guarantee that edited Pokémon are legitimate.
 
 The Switch build is compiled in GitHub Actions. No physical-console testing was
-performed for this renamed build; upstream hardware-validation statements do
-not describe new testing of pokesavreditr.
+performed for this release.
 
 Source: https://github.com/abhinavkumars1ngh/pokesavreditr
 Upstream PKSE: https://github.com/kiasta/PKSE
