@@ -35,7 +35,7 @@ jobs:
           cp pokesavreditr.nro dist/switch/switch/pokesavreditr/
           cp docs/SWITCH-INSTALL.md dist/switch/README.md
           cp LICENSE NOTICE.md dist/switch/
-          sha256sum pokesavreditr.nro > dist/switch/SHA256SUMS.txt
+          (cd dist/switch && sha256sum switch/pokesavreditr/pokesavreditr.nro > SHA256SUMS.txt)
           printf '%s\n' "$GITHUB_SHA" > dist/switch/SOURCE-COMMIT.txt
       - uses: actions/upload-artifact@v4
         with:
