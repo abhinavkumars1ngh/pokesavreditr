@@ -24,11 +24,9 @@ The production Switch homebrew file is **pokesavreditr.nro**. Copy it to
 `/switch/pokesavreditr/` on a homebrew-enabled Switch and launch it from the
 Homebrew Menu through title override (hold **R** while starting a game).
 
-See [Switch installation and building](docs/SWITCH-INSTALL.md). The app bundles
-its artwork/fonts and keeps the original `sdmc:/PKSE/` data directory for
-backup and bank compatibility. App metadata, the window and screen headers use
-the new name; dark and light themes use teal accents, with blue charcoal dark
-surfaces. 
+See [Switch installation and building](docs/SWITCH-INSTALL.md). Fonts and artwork
+are bundled. Backups and banks use `sdmc:/PKSE/` for compatibility. The interface
+has teal accents, dark and light themes, and blue charcoal dark surfaces.
 
 The [Switch build workflow](.github/workflows/build-switch.yml) compiles the
 production `.nro` and uploads an installable `pokesavreditr-switch` artifact.
