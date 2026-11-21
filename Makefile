@@ -37,13 +37,13 @@ include $(DEVKITPRO)/libnx/switch_rules
 #   of a homebrew executable (.nro). This is intended to be used for sysmodules.
 #   NACP building is skipped as well.
 #---------------------------------------------------------------------------------
-TARGET		:=	PKSE
+TARGET		:=	pokesavreditr
 BUILD		:=	build
 SOURCES		:=	src src/Pokemon src/Encryption src/Enums src/UI src/UI/Panels src/UI/Dialogs src/UI/Modals src/Trainer src/Names src/Utils src/Save src/Legality src/Conversion nanovg memecrypto
 DATA		:=	data
 INCLUDES	:=	include nanovg memecrypto
-APP_TITLE   :=  PKSE
-APP_AUTHOR  :=  Kiasta
+APP_TITLE   :=  pokesavreditr
+APP_AUTHOR  :=  Abhinav Kumar Singh / PKSE contributors
 # THE version, in two spellings. Both are set here and nothing downstream needs editing.
 #
 # APP_VERSION is the .nacp one -- the home menu and hbmenu read it. The name is not ours to choose:
@@ -59,8 +59,8 @@ APP_AUTHOR  :=  Kiasta
 #
 # NOTE: no trailing comment on either assignment line. Make keeps trailing whitespace in a value, so
 # "0.0.3 \t\t# ..." would have baked spaces into the .nacp version and the -D define.
-APP_VERSION :=	1.2.2
-APP_VERSION_FULL :=	1.2.2
+APP_VERSION :=	1.0.0
+APP_VERSION_FULL :=	1.0.0
 
 # Mirrors what switch_rules does for APP_VERSION: an unset long form falls back to the short one
 # rather than compiling in an empty version string.
@@ -70,14 +70,14 @@ endif
 #---------------------------------------------------------------------------------
 # BUILD_TYPE: production (the default, and the only one a release is built as) or development.
 #
-#   make                          -> PKSE.nro      (objects in build/)
-#   make BUILD_TYPE=development   -> PKSE-dev.nro  (objects in build-development/)
+#   make                          -> pokesavreditr.nro      (objects in build/)
+#   make BUILD_TYPE=development   -> pokesavreditr-dev.nro  (objects in build-development/)
 #   make all                      -> both
 #
 # The development build is the production build PLUS the on-console self test: it compiles
 # DEVELOPMENT_SOURCES and defines PKSE_DEVELOPMENT_BUILD, which turns on the save picker's `-`
 # binding (SELF_TEST_AVAILABLE in Globals.h). It also names itself, so it is never mistaken for a
-# release: "PKSE (Development)" in the home menu, a red DEVELOPMENT at the right of every screen's
+# release: "pokesavreditr (Development)" in the home menu, a red DEVELOPMENT at the right of every screen's
 # title bar, and the version gains -dev in the .nacp and -development in the app's own title bar,
 # logs and self-test report. Nothing else may differ between the two. In particular SD-card logging
 # stays a runtime setting -- Settings -> "Enable Debug Logging", default off -- in BOTH builds, so a

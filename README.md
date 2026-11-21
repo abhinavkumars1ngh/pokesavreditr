@@ -1,13 +1,30 @@
 # pokesavreditr
 
-A personal macOS adaptation of [PKSE](https://github.com/kiasta/PKSE), maintained
+A personal adaptation of [PKSE](https://github.com/kiasta/PKSE) for Nintendo Switch
+and macOS, maintained
 by [Abhinav Kumar Singh](https://github.com/abhinavkumars1ngh). It brings PKSE's
-Pokémon save editor screens to the Mac, with a desktop workflow for
-**Pokémon Legends: Z-A** saves.
+Pokémon save editor screens a teal-accented interface and the **pokesavreditr**
+name, alongside a Mac workflow for **Pokémon Legends: Z-A** saves.
 
 This is a derivative project. PKSE and its contributors provide the original
 editor and save logic; see [attribution and modifications](NOTICE.md) and the
 [original documentation](docs/UPSTREAM-README.md).
+
+## Nintendo Switch app
+
+The production Switch homebrew file is **pokesavreditr.nro**. Copy it to
+`/switch/pokesavreditr/` on a homebrew-enabled Switch and launch it from the
+Homebrew Menu through title override (hold **R** while starting a game).
+
+See [Switch installation and building](docs/SWITCH-INSTALL.md). The app bundles
+its artwork/fonts and keeps the original `sdmc:/PKSE/` data directory for
+backup and bank compatibility. App metadata, the window and screen headers use
+the new name; dark and light themes use teal accents, with blue charcoal dark
+surfaces. Original source class names remain for easier upstream comparison.
+
+The [Switch build workflow](.github/workflows/build-switch.yml) compiles the
+production `.nro` and uploads an installable `pokesavreditr-switch` artifact.
+Physical-console testing has not been performed for this renamed build.
 
 ## Mac features
 
@@ -54,8 +71,7 @@ open dist/pokesavreditr.app
 The output is `dist/pokesavreditr.app`, signed locally with an ad-hoc signature.
 It is not notarized. Rebuilding needs the development tools; the finished app
 bundles its runtime libraries. Generated assets and build products are ignored
-by Git. Switch build instructions remain in the upstream documentation; they
-still produce PKSE-named Switch artifacts.
+by Git. Switch and Mac builds have separate outputs.
 
 ## Open and edit a save
 

@@ -460,7 +460,7 @@ namespace UI
         userRects.clear();
 
         framebuffer.clear(Colors::Background);
-        drawTitleBar(framebuffer, "Pokémon Save Editor   v" + VERSION_STRING);
+        drawTitleBar(framebuffer, "Save studio   v" + VERSION_STRING);
 
         const UserEntry *u = currentUser();
 

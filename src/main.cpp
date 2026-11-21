@@ -32,7 +32,7 @@ int main()
     // closes itself.
     Utils::loadSettings();
 
-    logInfoToFile("Initializing PKSE...");
+    logInfoToFile("Initializing pokesavreditr...");
 
     Utils::cleanupOldLogs();
 

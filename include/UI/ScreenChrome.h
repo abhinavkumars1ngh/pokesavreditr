@@ -391,14 +391,14 @@ namespace UI
         }
     }
 
-    // Top title bar: "PKSE" + a subtitle on a sheet that curves along its bottom edge.
+    // Top title bar: "pokesavreditr" + a subtitle on a sheet that curves along its bottom edge.
     inline void drawTitleBar(PKSEFramebuffer &framebuffer, const std::string &subtitle)
     {
         framebuffer.drawSoftShadow(0, -40, framebuffer.getWidth(), HEADER_HEIGHT + 40, CHROME_CORNER_RADIUS);
         framebuffer.drawFilledRoundedRect(0, -CHROME_CORNER_RADIUS, framebuffer.getWidth(), HEADER_HEIGHT + CHROME_CORNER_RADIUS, CHROME_CORNER_RADIUS, Colors::Panel);
-        framebuffer.drawText(20, 8, "PKSE", Colors::Accent, TextStyle::Title);
+        framebuffer.drawText(20, 8, "pokesavreditr", Colors::Accent, TextStyle::Title);
         int boxWidth, bh;
-        framebuffer.measureText("PKSE", boxWidth, bh, TextStyle::Title);
+        framebuffer.measureText("pokesavreditr", boxWidth, bh, TextStyle::Title);
         // Short accent underline beneath the wordmark. A full-width rule cannot work against a curved
         // sheet: a straight line would cut across the corners.
         framebuffer.drawFilledRoundedRect(20, 52, boxWidth, 3, 2, Colors::Accent);

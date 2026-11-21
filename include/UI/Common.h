@@ -138,17 +138,17 @@ namespace UI
         // Semantic theme colors (runtime-swappable by applyTheme())
         // These are mutable so a dark/light toggle can restyle the whole UI without
         // changing the 15+ screens that reference Colors::Text etc. Defaults = dark theme.
-        inline Color Background = Color(28, 27, 38); // deep indigo-tinted charcoal
-        inline Color Panel = Color(40, 39, 54);      // elevated card surface
-        inline Color PanelAlt = Color(48, 47, 64);   // secondary surface / hover
-        inline Color Selected = Color(78, 70, 130);  // selection highlight (indigo)
-        inline Color Border = Color(60, 58, 78);
+        inline Color Background = Color(19, 29, 38); // deep blue charcoal
+        inline Color Panel = Color(28, 43, 53);      // elevated card surface
+        inline Color PanelAlt = Color(35, 53, 64);   // secondary surface / hover
+        inline Color Selected = Color(36, 91, 98);  // selection highlight (teal)
+        inline Color Border = Color(49, 72, 83);
         inline Color Text = Color(234, 233, 242);
         inline Color TextDim = Color(150, 148, 168);
-        inline Color Accent = Color(139, 122, 255);  // indigo/violet accent
-        inline Color AccentDim = Color(96, 84, 178); // muted accent (bars/underlines)
+        inline Color Accent = Color(87, 222, 203);  // teal accent
+        inline Color AccentDim = Color(44, 139, 133); // muted accent (bars/underlines)
         // Warm secondary (HOME's "warm-on-cool" pop): selected pill / primary action / Save.
-        // Indigo stays the hero; amber is used sparingly for the single primary/selected element.
+        // Teal stays the hero; amber is used sparingly for the single primary/selected element.
         inline Color Primary = Color(255, 184, 77);   // amber
         inline Color PrimaryText = Color(43, 32, 10); // dark text drawn on top of amber
         // Attention accent for warning dialog titles ("Unsaved Changes", "Delete Backup?"). Theme-aware
@@ -207,15 +207,15 @@ namespace UI
         g_themeMode = mode;
         if (mode == ThemeMode::Dark)
         {
-            Background = Color(28, 27, 38);
-            Panel = Color(40, 39, 54);
-            PanelAlt = Color(48, 47, 64);
-            Selected = Color(78, 70, 130);
-            Border = Color(60, 58, 78);
+            Background = Color(19, 29, 38);
+            Panel = Color(28, 43, 53);
+            PanelAlt = Color(35, 53, 64);
+            Selected = Color(36, 91, 98);
+            Border = Color(49, 72, 83);
             Text = Color(234, 233, 242);
             TextDim = Color(150, 148, 168);
-            Accent = Color(139, 122, 255);
-            AccentDim = Color(96, 84, 178);
+            Accent = Color(87, 222, 203);
+            AccentDim = Color(44, 139, 133);
             Primary = Color(255, 184, 77);
             PrimaryText = Color(43, 32, 10);
             Warning = Color(255, 199, 66);  // bright gold, reads on the dark UI
@@ -230,13 +230,13 @@ namespace UI
         { // Light
             Background = Color(241, 241, 246);
             Panel = Color(255, 255, 255);
-            PanelAlt = Color(232, 231, 242);
-            Selected = Color(223, 218, 250);
+            PanelAlt = Color(229, 240, 237);
+            Selected = Color(206, 239, 231);
             Border = Color(214, 214, 224);
             Text = Color(28, 28, 38);
             TextDim = Color(110, 110, 128);
-            Accent = Color(109, 90, 230);
-            AccentDim = Color(150, 134, 240);
+            Accent = Color(0, 111, 106);
+            AccentDim = Color(70, 153, 145);
             Primary = Color(245, 166, 45);
             PrimaryText = Color(43, 32, 10);
             Warning = Color(176, 98, 0);    // deep amber, reads on light-mode white

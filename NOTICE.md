@@ -14,6 +14,10 @@ Mac adaptation and publication changes, November 2026:
   and protection against writing while the game is running.
 - A Mac app build helper that bundles SDL libraries and generated artwork.
 - pokesavreditr app naming, bundle identity, documentation and repository setup.
+- Switch homebrew output and metadata renamed to pokesavreditr 1.0.0; shared
+  screen headers, teal accents and blue charcoal surfaces; production Switch
+  build workflow and installation package. Original Switch data paths remain
+  compatible with PKSE.
 
 The original PKSE documentation is retained in [docs/UPSTREAM-README.md](docs/UPSTREAM-README.md).
 The project retains the GNU Affero General Public License v3.0 in [LICENSE](LICENSE).

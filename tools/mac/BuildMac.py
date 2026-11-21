@@ -59,7 +59,7 @@ for name in ('TrainerViewScreen','BackupSelectionScreen','SpriteManager','ListSe
 for folder in ('Panels','Dialogs','Modals'):
     sources.extend(sorted((root / 'src/UI' / folder).glob('*.cpp')))
 sources.extend([root / 'src/Save/Block.cpp', root / 'src/Save/SaveEnvelope.cpp', build / 'GetSaveFileContents.cpp', build / 'MacFiles.cpp', build / 'PKSEFramebuffer.cpp',port / 'MacMain.mm'])
-flags = ['-std=c++20','-O2','-fno-rtti','-fno-exceptions','-Wall','-Wno-deprecated-declarations','-Wno-unused-parameter','-include','cstdint','-include','cstddef','-include','Globals.h','-I'+str(shims),'-I'+str(compatibleInclude),'-I'+str(compatibleInclude/'UI'),'-I'+str(root/'nanovg'),'-I'+str(root/'memecrypto'),'-I'+str(brew_prefix/'include'),'-DGL_SILENCE_DEPRECATION']
+flags = ['-std=c++20','-O2','-fno-rtti','-fno-exceptions','-Wall','-Wno-deprecated-declarations','-Wno-unused-parameter','-include','cstdint','-include','cstddef','-include','Globals.h','-I'+str(shims),'-I'+str(compatibleInclude),'-I'+str(compatibleInclude/'UI'),'-I'+str(root/'nanovg'),'-I'+str(root/'memecrypto'),'-I'+str(brew_prefix/'include'),'-DGL_SILENCE_DEPRECATION', '-DPKSE_VERSION="1.0.0"']
 objects = []
 def compile_source(source):
     sourceText = source.read_text()
