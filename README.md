@@ -1,8 +1,8 @@
 # pokesavreditr
 
 A personal adaptation of [PKSE](https://github.com/kiasta/PKSE) for Nintendo Switch
-and macOS, maintained
-by [Abhinav Kumar Singh](https://github.com/abhinavkumars1ngh). It brings PKSE's
+and macOS, maintained by
+[Abhinav Kumar Singh](https://github.com/abhinavkumars1ngh). It gives PKSE's
 Pokémon save editor screens a teal-accented interface and the **pokesavreditr**
 name, alongside a Mac workflow for **Pokémon Legends: Z-A** saves.
 
@@ -12,6 +12,7 @@ editor and save logic; see [attribution and modifications](NOTICE.md) and the
 
 ## Nintendo Switch app
 
+Download the Switch package from [Releases](https://github.com/abhinavkumars1ngh/pokesavreditr/releases).
 The production Switch homebrew file is **pokesavreditr.nro**. Copy it to
 `/switch/pokesavreditr/` on a homebrew-enabled Switch and launch it from the
 Homebrew Menu through title override (hold **R** while starting a game).

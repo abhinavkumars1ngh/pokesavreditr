@@ -1,30 +1,14 @@
-# Security Policy
+# Security policy
 
-## Supported versions
+This repository maintains pokesavreditr, a personal adaptation of PKSE. Security
+issues in this adaptation belong here; issues in upstream PKSE should also be
+reported to its maintainers as appropriate.
 
-Only the latest release of PKSE receives fixes. If you can, check that the problem still happens on the newest release before reporting it.
+If private vulnerability reporting is available in the repository's Security
+tab, use it for crafted-save crashes, memory errors, or unintended save writes.
+Do not post personal saves, trainer IDs, console keys or credentials in public
+issues. If private reporting is unavailable, open an issue requesting a private
+contact method without including exploit details or private files.
 
-## Reporting a vulnerability
-
-**Please don't open a public issue for a security problem.** Report it privately instead:
-
-1. Open the repository's **Security and quality** tab.
-2. Choose **Report a vulnerability**.
-
-Or go straight to https://github.com/abhinavkumars1ngh/pokesavreditr/security/advisories/new. Only you and the maintainer can see the report.
-
-Please include:
-
-- the PKSE version, and the game or file type involved;
-- what someone could do with the problem, and the steps to reproduce it;
-- a sample file, if one is needed to reproduce it. A save file holds its trainer's name and ID, so only send one you're happy to hand over.
-
-## What counts as a security problem
-
-PKSE reads files it did not create: game saves, save files copied onto the SD card, and PKSM `.bnk` banks. A crafted file that makes PKSE crash, read or write out of bounds, or damage a save or bank other than the one being opened belongs here.
-
-Ordinary bugs -- a wrong value, a missing feature, a Pokemon the legality checker misjudges -- belong in a normal [issue](https://github.com/abhinavkumars1ngh/pokesavreditr/issues/new/choose).
-
-## What to expect
-
-PKSE is maintained by one person in their spare time, so responses are best effort. Once a fix ships, you'll be credited in the advisory and the release notes, unless you'd rather not be.
+Ordinary bugs and feature requests can be filed under Issues. Response times
+are best effort; this is a personal project.

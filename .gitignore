@@ -92,8 +92,9 @@ title.keys
 *.sav
 *.save
 *.bnk
-**/save/
-**/save.work/
+/private/
+/test-saves/
+/save.work/
 **/PKSE Backups/
 
 .venv/
